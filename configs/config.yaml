@@ -1,0 +1,23 @@
+application:
+  name: Arabic Voice Cloning Station
+  environment: development
+server:
+  host: 127.0.0.1
+  port: 7860
+gpu:
+  device: cuda:0
+  dtype: float16
+audio:
+  sample_rate: 24000
+  channels: 1
+  min_reference_seconds: 5
+  recommended_reference_seconds: 10
+  max_reference_seconds: 15
+storage:
+  save_reference_audio: true
+  save_generated_audio: true
+  retention_days: 0
+tts:
+  active_model: audar_flash
+security:
+  require_consent: true

@@ -1,0 +1,14 @@
+torch
+torchaudio
+transformers
+accelerate
+gradio
+fastapi
+uvicorn
+librosa
+soundfile
+numpy
+scipy
+pydantic
+pyyaml
+pytest

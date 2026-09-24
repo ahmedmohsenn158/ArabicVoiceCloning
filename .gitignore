@@ -1,0 +1,17 @@
+models/
+data/references/*
+!data/references/.gitkeep
+data/generated/*
+!data/generated/.gitkeep
+data/temporary/*
+!data/temporary/.gitkeep
+*.wav
+*.mp3
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+.env
+__pycache__/
+.pytest_cache/
+.venv/

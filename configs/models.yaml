@@ -1,0 +1,21 @@
+active_model: audar_flash
+models:
+  audar_flash:
+    enabled: true
+    type: audar
+    model_id: "Audar/Audar-TTS-V1-Flash"
+    device: "cuda"
+    dtype: "float16"
+    compile: false
+  omnivoice:
+    enabled: true
+    type: omnivoice
+    model_id: "k2-fsa/OmniVoice"
+    device: "cuda"
+    dtype: "float16"
+  f5tts_ar:
+    enabled: true
+    type: f5tts
+    model_id: "SWivid/F5-TTS"
+    device: "cuda"
+    dtype: "float16"
