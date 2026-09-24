@@ -5,15 +5,11 @@ from app.services.generation_service import generate_voice
 from app.tts.audar import AudarTTSAdapter
 from app.utils.logging import logger
 
+from app.text.prompts import PRESET_PROMPTS
+
 # Initialize Model (Mocking global state for UI simplicity)
 model = AudarTTSAdapter()
 model.load()
-
-PRESET_PROMPTS = {
-    "Egyptian Introduction": "أهلاً يا جماعة، النهاردة هنتكلم عن موضوع مهم جداً.",
-    "Education": "التعلم المستمر يساعدنا على تطوير مهاراتنا وتحقيق أهدافنا.",
-    "Arabic + English": "النهاردة هنتكلم عن Artificial Intelligence واستخداماته."
-}
 
 def update_text_from_preset(preset_key):
     return PRESET_PROMPTS.get(preset_key, "")

@@ -1,0 +1,13 @@
+prompts:
+  - id: greeting
+    label: "Introduction"
+    text: "مرحباً، أنا سعيد بوجودي معكم اليوم."
+  - id: education
+    label: "Education"
+    text: "التعلم المستمر يساعدنا على تطوير مهاراتنا وتحقيق أهدافنا."
+  - id: egyptian
+    label: "Egyptian Arabic"
+    text: "أهلاً يا جماعة، النهاردة هنتكلم عن موضوع مهم جداً."
+  - id: english_mix
+    label: "Arabic + English"
+    text: "النهاردة هنتكلم عن Artificial Intelligence واستخداماته."

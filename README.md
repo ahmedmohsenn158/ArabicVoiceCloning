@@ -11,3 +11,53 @@ A fully local Arabic voice-cloning station designed to record a short reference 
 
 ## Quick Start
 See `docs/deployment.md` for detailed instructions on setting up the environment, downloading models, and running the station.
+
+## Architecture
+```
+                         LOCAL MACHINE
+                              │
+                              ▼
+                 ┌────────────────────────┐
+                 │   Arabic Voice Station │
+                 │                        │
+                 │       Gradio UI        │
+                 └───────────┬────────────┘
+                             │
+                             ▼
+                 ┌────────────────────────┐
+                 │       FastAPI          │
+                 │     Application API    │
+                 └───────────┬────────────┘
+                             │
+            ┌────────────────┼─────────────────┐
+            │                │                 │
+            ▼                ▼                 ▼
+       Audio Service    Voice Service     Text Service
+            │                │                 │
+            └────────────────┼─────────────────┘
+                             │
+                             ▼
+                  ┌──────────────────────┐
+                  │    TTS Abstraction   │
+                  └──────────┬───────────┘
+                             │
+             ┌───────────────┼───────────────┐
+             │               │               │
+             ▼               ▼               ▼
+        Audar Flash      OmniVoice       F5-TTS
+             │               │               │
+             └───────────────┼───────────────┘
+                             │
+                             ▼
+                    ┌─────────────────┐
+                    │   RTX 5090 GPU  │
+                    │                 │
+                    │ Model in VRAM   │
+                    └────────┬────────┘
+                             │
+                             ▼
+                    Generated WAV
+                             │
+                             ▼
+                       Audio Player
+```
